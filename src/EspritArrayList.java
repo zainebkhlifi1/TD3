@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class EspritArrayList implements University {
 
     private ArrayList <Etudiant> listeDesEtudiants;
@@ -30,16 +31,24 @@ public class EspritArrayList implements University {
 
     @Override
     public void displayEtudiants() {
-        System.out.println(listeDesEtudiants);
+      System.out.println("****"+listeDesEtudiants);
+    }
+
+    @Override
+    public String toString() {
+        return "EspritArrayList{" +
+                "listeDesEtudiants=" + listeDesEtudiants +
+                '}';
     }
 
     @Override
     public void trierEtudiantsParId() {
-
+        Collections.sort(listeDesEtudiants);
     }
 
     @Override
     public void trierEtudiantsParNom() {
+        Collections.sort(listeDesEtudiants, new TrieEtudiantParNom());
 
     }
 

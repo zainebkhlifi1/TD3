@@ -1,4 +1,4 @@
-public class Etudiant {
+public class Etudiant implements Comparable<Etudiant> {
    int id ;
    String nom;
    String prenom;
@@ -49,17 +49,12 @@ public class Etudiant {
 
 
     public String toString() {
-return ( "nom"+this.nom+"id"+this.id+"prenom"+prenom);
+return ( "nom : "+this.nom+"id : "+this.id+"prenom :"+prenom);
     }
 
 
-
-
-
-
-
-
-
-
-
+    @Override
+    public int compareTo(Etudiant o) {
+        return 0;
+    }
 }
