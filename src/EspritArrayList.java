@@ -6,14 +6,13 @@ public class EspritArrayList implements University {
     private ArrayList <Etudiant> listeDesEtudiants;
 
     public EspritArrayList (){
-        listeDesEtudiants= new ArrayList<>();
+        listeDesEtudiants= new ArrayList<Etudiant>();
     };
 
     public void ajouterEtudiant(Etudiant e){
-listeDesEtudiants.add(e);
+        listeDesEtudiants.add(e);
 
     }
-
     @Override
     public boolean rechercherEtudiant(Etudiant e) {
         return listeDesEtudiants.contains(e);
